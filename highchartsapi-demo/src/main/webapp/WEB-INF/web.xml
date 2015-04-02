@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2015 by Manfred Huber.
+  -->
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ProjectTemplate" version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <context-param>
+        <description>Produktionsmodus</description>
+        <param-name>productionMode</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <description>Heartbeat Intervall.</description>
+        <param-name>heartbeatInterval</param-name>
+        <param-value>300</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Demo</servlet-name>
+        <servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
+        <init-param>
+            <param-name>UIProvider</param-name>
+            <param-value>com.vaadin.server.DefaultUIProvider</param-value>
+        </init-param>
+        <init-param>
+            <param-name>UI</param-name>
+            <param-value>at.downdrown.vaadinaddons.highchartsapi.demo.DemoUI</param-value>
+        </init-param>
+        <init-param>
+            <param-name>widgetset</param-name>
+            <param-value>at.downdrown.vaadinaddons.highchartsapi.demo.DemoWidgetSet</param-value>
+        </init-param>
+        <init-param>
+            <param-name>closeIdleSessions</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>

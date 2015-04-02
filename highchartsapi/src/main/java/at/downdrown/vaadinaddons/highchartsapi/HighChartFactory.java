@@ -4,11 +4,25 @@
 
 package at.downdrown.vaadinaddons.highchartsapi;
 
+import at.downdrown.vaadinaddons.highchartsapi.exceptions.HighChartsException;
+import at.downdrown.vaadinaddons.highchartsapi.exceptions.NoChartTypeException;
+import at.downdrown.vaadinaddons.highchartsapi.exceptions.WrongSeriesException;
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartConfiguration;
 
 public class HighChartFactory {
 
-    public static HighChart renderChart(ChartConfiguration configuration) {
+    /**
+     * This method renders a chart from a passed {@link ChartConfiguration} object.
+     * You can catch the super-exception {@link HighChartsException} if you don't
+     * want to catch each exception seperate.
+     *
+     * @param configuration
+     * @return {@link HighChart} object.
+     * @throws HighChartsException
+     * @throws NoChartTypeException
+     * @throws WrongSeriesException
+     */
+    public static HighChart renderChart(ChartConfiguration configuration) throws HighChartsException {
         HighChart tempChart = new HighChart();
         tempChart.setChartoptions(configuration.getHighChartValue());
         return tempChart;

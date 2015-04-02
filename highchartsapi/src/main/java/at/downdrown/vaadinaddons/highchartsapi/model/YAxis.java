@@ -4,7 +4,7 @@
 
 package at.downdrown.vaadinaddons.highchartsapi.model;
 
-public class YAxis {
+public class YAxis implements HighchartsObject {
     private String title;
     private boolean labelsEnabled = true;
 

@@ -4,7 +4,7 @@
 
 package at.downdrown.vaadinaddons.highchartsapi.model;
 
-public class XAxis {
+public class XAxis implements HighchartsObject {
     private String title;
     private boolean labelsEnabled = true;
 
