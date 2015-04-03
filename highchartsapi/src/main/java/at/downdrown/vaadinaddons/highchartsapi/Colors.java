@@ -8,7 +8,6 @@ import com.vaadin.shared.ui.colorpicker.Color;
 
 /**
  * Interface with common HTML Colors.
- * <p/>
  * <p>Take a look <a href="http://www.w3schools.com/html/html_colornames.asp">this</a> for further information.</p>
  */
 public interface Colors {
@@ -37,7 +36,7 @@ public interface Colors {
     Color DARKBLUE = new Color(0, 0, 139);
     Color DARKCYAN = new Color(0, 139, 139);
     Color DARKGOLDENROD = new Color(184, 134, 11);
-    Color DARKGREY = new Color(169, 169, 169);
+    Color DARKGRAY = new Color(169, 169, 169);
     Color DARKGREEN = new Color(0, 100, 0);
     Color DARKKHAKI = new Color(189, 183, 107);
     Color DARKMAGENTA = new Color(139, 0, 139);

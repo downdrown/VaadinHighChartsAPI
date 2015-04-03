@@ -8,18 +8,16 @@ import at.downdrown.vaadinaddons.highchartsapi.model.ChartConfiguration;
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartType;
 import at.downdrown.vaadinaddons.highchartsapi.model.data.PieChartData;
 import at.downdrown.vaadinaddons.highchartsapi.model.series.BarChartSeries;
+import at.downdrown.vaadinaddons.highchartsapi.model.series.ColumnChartSeries;
 import at.downdrown.vaadinaddons.highchartsapi.model.series.LineChartSeries;
 import at.downdrown.vaadinaddons.highchartsapi.model.series.PieChartSeries;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
-import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
-import javax.servlet.annotation.WebServlet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -133,11 +131,41 @@ public class DemoUI extends UI {
         } catch (HighChartsException e) {
             e.printStackTrace();
         }
-        setContent(layout);
-    }
 
-    @WebServlet(value = {"/demo/*", "/VAADIN/*"}, asyncSupported = true)
-    @VaadinServletConfiguration(productionMode = false, ui = DemoUI.class, widgetset = "at.downdrown.vaadinaddons.highchartsapi.demo.DemoWidgetSet")
-    public static class Servlet extends VaadinServlet {
+        // *** BAR ***
+        ChartConfiguration columnConfiguration = new ChartConfiguration();
+        columnConfiguration.setTitle("TestColumn");
+        columnConfiguration.setChartType(ChartType.BAR);
+        columnConfiguration.setBackgroundColor(Colors.WHITE);
+
+        List<Object> bananaColumnValues = new ArrayList<Object>();
+        bananaColumnValues.add(11.3);
+        bananaColumnValues.add(25.1);
+        bananaColumnValues.add(32.7);
+
+        ColumnChartSeries bananaColumn = new ColumnChartSeries("Bananas", bananaValues);
+
+        List<Object> sweetColumnValues = new ArrayList<Object>();
+        sweetColumnValues.add(33.65);
+        sweetColumnValues.add(63.24);
+        sweetColumnValues.add(21.52);
+
+        ColumnChartSeries choclateColumn = new ColumnChartSeries("Choclate", sweetValues);
+
+        columnConfiguration.getSeriesList().add(bananaColumn);
+        columnConfiguration.getSeriesList().add(choclateColumn);
+
+        try {
+            HighChart columnChart = HighChartFactory.renderChart(columnConfiguration);
+            columnChart.setHeight(80, Unit.PERCENTAGE);
+            columnChart.setWidth(80, Unit.PERCENTAGE);
+            System.out.println("ColumnChart Script : " + columnConfiguration.getHighChartValue());
+            layout.addComponent(columnChart);
+            layout.setComponentAlignment(columnChart, Alignment.MIDDLE_CENTER);
+
+        } catch (HighChartsException e) {
+            e.printStackTrace();
+        }
+        setContent(layout);
     }
 }

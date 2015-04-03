@@ -16,11 +16,11 @@ public class HighChartFactory {
      * You can catch the super-exception {@link HighChartsException} if you don't
      * want to catch each exception seperate.
      *
-     * @param configuration
+     * @param configuration The {@link ChartConfiguration} object to render.
      * @return {@link HighChart} object.
-     * @throws HighChartsException
-     * @throws NoChartTypeException
-     * @throws WrongSeriesException
+     * @throws HighChartsException Super Exception.
+     * @throws NoChartTypeException Thrown, when there is no chartType set in the configuration.
+     * @throws WrongSeriesException Thrown, when there is a Series passed with a different chart type than the config.
      */
     public static HighChart renderChart(ChartConfiguration configuration) throws HighChartsException {
         HighChart tempChart = new HighChart();

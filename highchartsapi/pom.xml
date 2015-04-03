@@ -5,7 +5,7 @@
 	<groupId>at.downdrown.vaadinaddons</groupId>
 	<artifactId>highchartsapi</artifactId>
 	<packaging>jar</packaging>
-	<version>1.6</version>
+	<version>1.7</version>
 	<name>HighChartsAPI Add-on</name>
 	<inceptionYear>2015</inceptionYear>
 
