@@ -397,4 +397,13 @@ public class ChartConfiguration {
         builder.append(" };");
         return builder.toString();
     }
+
+    public void removeBackgroundLines() {
+        this.xAxis.setLineWidth(0);
+        this.xAxis.setGridLineWidth(0);
+        this.xAxis.setTickLength(0);
+        this.yAxis.setLineWidth(0);
+        this.yAxis.setGridLineWidth(0);
+        this.yAxis.setTickLength(0);
+    }
 }

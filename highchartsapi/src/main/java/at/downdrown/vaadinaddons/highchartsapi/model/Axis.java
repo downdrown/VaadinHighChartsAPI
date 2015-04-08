@@ -22,6 +22,8 @@ public class Axis {
     private boolean showLastLabel = true;
     private boolean labelsEnabled = true;
     private boolean allowDecimals = true;
+    private int tickLength = 1;
+    private int gridLineWidth = 1;
 
     public AxisType getAxisType() {
         return axisType;
@@ -103,6 +105,32 @@ public class Axis {
         this.allowDecimals = allowDecimals;
     }
 
+    public int getTickLength() {
+        return tickLength;
+    }
+
+    /**
+     * Set the chart's tickLength.
+     *
+     * @param tickLength the chart's tickLength.
+     */
+    public void setTickLength(int tickLength) {
+        this.tickLength = tickLength;
+    }
+
+    public int getGridLineWidth() {
+        return gridLineWidth;
+    }
+
+    /**
+     * Set the chart's gridLineWidth.
+     *
+     * @param gridLineWidth the chart's gridLineWidth.
+     */
+    public void setGridLineWidth(int gridLineWidth) {
+        this.gridLineWidth = gridLineWidth;
+    }
+
     public String getHighChartValue() throws HighChartsException {
 
         if (this.axisType == null) throw new HighChartsException("No AxisType was set to the passed Axis object.");
@@ -142,6 +170,12 @@ public class Axis {
 
         //LineWidth
         builder.append(", lineWidth: " + lineWidth);
+
+        //GridLineWidth
+        builder.append(", gridLineWidth: " + gridLineWidth);
+
+        //TickLength
+        builder.append(", tickLength: " + tickLength);
 
         //Allow Decimals
         builder.append(", allowDecimals: " + this.allowDecimals);

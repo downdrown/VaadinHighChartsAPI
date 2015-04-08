@@ -25,6 +25,7 @@ public class HighChartFactory {
     public static HighChart renderChart(ChartConfiguration configuration) throws HighChartsException {
         HighChart tempChart = new HighChart();
         tempChart.setChartoptions(configuration.getHighChartValue());
+        tempChart.setChartConfiguration(configuration);
         return tempChart;
     }
 

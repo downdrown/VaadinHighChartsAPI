@@ -4,19 +4,14 @@
 
 package at.downdrown.vaadinaddons.highchartsapi;
 
+import at.downdrown.vaadinaddons.highchartsapi.model.ChartConfiguration;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 
 public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
     private static final long serialVersionUID = 7738496276049495017L;
-
     public static int currChartId = 0;
-
-    public static int nextChartId() {
-        return ++currChartId;
-    }
-
-
     protected int chartId = nextChartId();
+    private ChartConfiguration chartConfiguration;
 
     /**
      * Creates the chart object.
@@ -25,6 +20,10 @@ public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
         setId(getDomId());
         getState().domId = getDomId();
         getState().hcjs = "";
+    }
+
+    public static int nextChartId() {
+        return ++currChartId;
     }
 
     /**
@@ -54,5 +53,23 @@ public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
      */
     public void setChartoptions(String chartoptions) {
         getState().hcjs = "var options = " + chartoptions;
+    }
+
+    /**
+     * Returns the chart's configuration object.
+     *
+     * @return {@link ChartConfiguration} object.
+     */
+    public ChartConfiguration getChartConfiguration() {
+        return chartConfiguration;
+    }
+
+    /**
+     * Set the chart's configuration object.
+     *
+     * @param chartConfiguration the chart's configuration object.
+     */
+    public void setChartConfiguration(ChartConfiguration chartConfiguration) {
+        this.chartConfiguration = chartConfiguration;
     }
 }
