@@ -10,10 +10,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="gwt" name="GWT">
@@ -21,7 +17,7 @@
         <setting name="additionalCompilerParameters" value="-Xss1024k" />
         <setting name="compilerParameters" value="-compileReport" />
         <setting name="compilerMaxHeapSize" value="512" />
-        <setting name="gwtSdkUrl" value="file://$MAVEN_REPOSITORY$/com/vaadin/vaadin-client/7.4.2" />
+        <setting name="gwtSdkUrl" value="file://C:\Users\02ub0j08\.m2\repository/com/vaadin/vaadin-client/7.4.2" />
         <setting name="gwtSdkType" value="Vaadin-Maven" />
         <setting name="webFacet" value="Web" />
       </configuration>
@@ -33,12 +29,11 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="highchartsapi" />
+    <orderEntry type="library" name="Maven: at.downdrown.vaadinaddons:highchartsapi:1.7" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-server:7.4.2" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-push:7.4.2" level="project" />

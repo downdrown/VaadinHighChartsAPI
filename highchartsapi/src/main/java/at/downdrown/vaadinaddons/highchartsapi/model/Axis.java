@@ -25,6 +25,14 @@ public class Axis {
     private int tickLength = 1;
     private int gridLineWidth = 1;
 
+    public Axis() {
+
+    }
+
+    public Axis(AxisType axisType) {
+        this.axisType = axisType;
+    }
+
     public AxisType getAxisType() {
         return axisType;
     }
