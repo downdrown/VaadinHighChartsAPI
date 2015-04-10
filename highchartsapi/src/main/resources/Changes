@@ -1,5 +1,5 @@
 ### Version 1.5
-- Basic Functionality.
++ Basic Functionality.
 
 ### Version 1.6
 + Different instantiation (!!!) - Take a look at the Code Samples for further info!
@@ -18,3 +18,7 @@
 + PieChartPlotOptions (Will defaultly be used when none is set)
 + Changed default chart look & feel
 + Removed xAxis, yAxis components
+
+### Version 1.7.1
++ Axis Component improvements (Axis Title, GridLine Behavior)
++ ChartConfiguration improvements

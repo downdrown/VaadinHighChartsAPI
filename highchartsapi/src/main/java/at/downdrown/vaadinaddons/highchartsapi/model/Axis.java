@@ -22,8 +22,12 @@ public class Axis {
     private boolean showLastLabel = true;
     private boolean labelsEnabled = true;
     private boolean allowDecimals = true;
-    private int tickLength = 1;
+    private int tickLength = 0;
     private int gridLineWidth = 1;
+
+    public Axis(AxisType axisType) {
+        this.axisType = axisType;
+    }
 
     public AxisType getAxisType() {
         return axisType;
@@ -142,7 +146,7 @@ public class Axis {
         if (this.title != null) {
             builder.append("title : { text: '" + this.title + "' }");
         } else {
-            builder.append("title : { text: null }");
+            builder.append("title : { enabled: false}");
         }
 
         //Axis Value Type

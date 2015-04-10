@@ -31,8 +31,8 @@ public class ChartConfiguration {
     private boolean creditsEnabled = false;
     private boolean legendEnabled = true;
     private boolean tooltipEnabled = true;
-    private Axis xAxis = null;
-    private Axis yAxis = null;
+    private Axis xAxis = new Axis(Axis.AxisType.xAxis);
+    private Axis yAxis = new Axis(Axis.AxisType.yAxis);
     private Margin chartMargin = null;
     private List<HighChartsSeries> seriesList = new ArrayList<HighChartsSeries>();
     private List<Color> colors = new ArrayList<Color>();
@@ -335,7 +335,7 @@ public class ChartConfiguration {
 
         //Set Subtitle if any was given
         builder.append(", subtitle: { ");
-        if (getTitle() != null) {
+        if (getSubTitle() != null) {
             builder.append("text: '" + subTitle + "'");
         } else {
             builder.append("text: null");

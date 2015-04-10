@@ -132,11 +132,12 @@ public class DemoUI extends UI {
             e.printStackTrace();
         }
 
-        // *** BAR ***
+        // *** COLUMN ***
         ChartConfiguration columnConfiguration = new ChartConfiguration();
         columnConfiguration.setTitle("TestColumn");
-        columnConfiguration.setChartType(ChartType.BAR);
+        columnConfiguration.setChartType(ChartType.COLUMN);
         columnConfiguration.setBackgroundColor(Colors.WHITE);
+
 
         List<Object> bananaColumnValues = new ArrayList<Object>();
         bananaColumnValues.add(11.3);
