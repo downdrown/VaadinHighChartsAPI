@@ -12,6 +12,9 @@ import com.vaadin.shared.ui.colorpicker.Color;
 import junit.framework.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // JUnit tests here
 public class HighChartsAPITest {
 
@@ -56,6 +59,32 @@ public class HighChartsAPITest {
 		pieChart.setHeight(80, Sizeable.Unit.PERCENTAGE);
 		pieChart.setWidth(80, Sizeable.Unit.PERCENTAGE);
 		System.out.println("PieChart Script : " + pieConfiguration.getHighChartValue());
+
+	}
+
+	@Test
+	public void doTheChaChaChart() {
+		ChartConfiguration lineChart = new ChartConfiguration();
+		lineChart.setChartType(ChartType.LINE);
+
+		//Create your Categories List
+		List<String> myCategories = new ArrayList<String>();
+		myCategories.add("Category A");
+		myCategories.add("Category B");
+
+
+		Axis xAxis = new Axis(Axis.AxisType.xAxis);
+
+		// *** ADD THE CATEGORIES TO THE AXIS ***
+		xAxis.setCategories(myCategories);
+
+		// *** ADD THE AXIS TO THE CHART CONFIG ***
+		lineChart.setxAxis(xAxis);
+
+		/*
+		First add the categories to your axis component, then the axis to the chart configuration.
+		 Afterwards you can render it with the HighChartsFactory
+		 */
 
 	}
 }

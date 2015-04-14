@@ -1,0 +1,34 @@
+### Version 1.5
++Basic Functionality.
+
+### Version 1.6
++Different instantiation (!!!) - Take a look at the Code Samples for further info!
++Empty Title
++Default Background is now transparent
++LineChart
++BarChart
++Margin for Chart
++Colors interface
++Changing Chart Colors
++(JavaDoc)
++(Demo UI)
+
+### Version 1.7
++Axis Component improvements
++PieChartPlotOptions (Will defaultly be used when none is set)
++Changed default chart look & feel
++Removed xAxis, yAxis components
+
+### Version 1.7.1 (Pre-Release)
++ Axis Component improvements (Axis Title, GridLine Behavior)
++ ChartConfiguration improvements
+
+### Version 1.7.2 (Pre-Release)
++ Version problem solved (Addon was bound to Vaadin 7.4.2)
++ Added AreaChartSeries
++ Added AreaChartPlotOptions
++ Added BarChartPlotOptions
++ Added ColumnChartPlotOptions
++ Added LineChartPlotOptions
++ Changed default chartConfiguration behaviour
++ Added 'default colors' to chartConfiguration

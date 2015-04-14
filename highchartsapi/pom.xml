@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>at.downdrown.vaadinaddons</groupId>
 	<artifactId>highchartsapi</artifactId>
 	<packaging>jar</packaging>
-	<version>1.7</version>
+	<version>1.7.2</version>
 	<name>HighChartsAPI Add-on</name>
 	<inceptionYear>2015</inceptionYear>
 
@@ -24,7 +24,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.4.2</vaadin.version>
+		<vaadin.version>[7.3.10, 7.4.3]</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 
 		<!-- ZIP Manifest fields -->
@@ -98,7 +98,7 @@
 			<version>${vaadin.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- This can be replaced with TestNG or some other test framework supported by the surefire plugin -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -142,7 +142,7 @@
 					</archive>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -208,8 +208,8 @@
 			<resource>
 				<directory>src/main/java</directory>
 				<excludes>
-                    <exclude>rebel.xml</exclude>
-                </excludes>
+					<exclude>rebel.xml</exclude>
+				</excludes>
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -223,7 +223,7 @@
 				</includes>
 			</resource>
 		</resources>
-		
+
 	</build>
 
 </project>

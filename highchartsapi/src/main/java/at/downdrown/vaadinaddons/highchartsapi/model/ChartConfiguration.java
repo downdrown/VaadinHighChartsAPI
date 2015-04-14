@@ -7,9 +7,9 @@ package at.downdrown.vaadinaddons.highchartsapi.model;
 import at.downdrown.vaadinaddons.highchartsapi.Colors;
 import at.downdrown.vaadinaddons.highchartsapi.exceptions.HighChartsException;
 import at.downdrown.vaadinaddons.highchartsapi.exceptions.NoChartTypeException;
+import at.downdrown.vaadinaddons.highchartsapi.exceptions.WrongPlotOptionsException;
 import at.downdrown.vaadinaddons.highchartsapi.exceptions.WrongSeriesException;
-import at.downdrown.vaadinaddons.highchartsapi.model.plotoptions.HighChartsPlotOptions;
-import at.downdrown.vaadinaddons.highchartsapi.model.plotoptions.PieChartPlotOptions;
+import at.downdrown.vaadinaddons.highchartsapi.model.plotoptions.*;
 import at.downdrown.vaadinaddons.highchartsapi.model.series.HighChartsSeries;
 import com.vaadin.shared.ui.colorpicker.Color;
 
@@ -38,6 +38,18 @@ public class ChartConfiguration {
     private List<Color> colors = new ArrayList<Color>();
     private HighChartsPlotOptions plotOptions = null;
     private ZoomType zoomType = null;
+
+    //Constructors
+    public ChartConfiguration() {
+
+        //Add default chart colors for special look & feel.
+        this.colors.add(Colors.LIGHTSKYBLUE);
+        this.colors.add(Colors.LIGHTGREEN);
+        this.colors.add(Colors.LIGHTSALMON);
+        this.colors.add(Colors.LIGHTCORAL);
+        this.colors.add(Colors.LIGHTSTEELBLUE);
+        this.colors.add(Colors.LIGHTGRAY);
+    }
 
     public String getTitle() {
         return title;
@@ -389,9 +401,17 @@ public class ChartConfiguration {
         }
 
         if (this.plotOptions != null) {
-            builder.append(this.plotOptions.getHighChartValue());
+            if (this.plotOptions.getChartType() != this.chartType) {
+                throw new WrongPlotOptionsException("Different chart types in configuration and plotOptions.");
+            } else {
+                builder.append(this.plotOptions.getHighChartValue());
+            }
         } else {
-            if (getChartType() == ChartType.PIE) builder.append(new PieChartPlotOptions().getHighChartValue());
+            if (this.chartType == ChartType.AREA) builder.append(new AreaChartPlotOptions().getHighChartValue());
+            if (this.chartType == ChartType.BAR) builder.append(new BarChartPlotOptions().getHighChartValue());
+            if (this.chartType == ChartType.COLUMN) builder.append(new ColumnChartPlotOptions().getHighChartValue());
+            if (this.chartType == ChartType.LINE) builder.append(new LineChartPlotOptions().getHighChartValue());
+            if (this.chartType == ChartType.PIE) builder.append(new PieChartPlotOptions().getHighChartValue());
         }
 
         builder.append(" };");
