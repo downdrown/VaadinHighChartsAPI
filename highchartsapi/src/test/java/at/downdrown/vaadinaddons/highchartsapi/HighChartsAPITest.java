@@ -22,8 +22,7 @@ public class HighChartsAPITest {
 
 	@Test
 	public void getTestHighchartAxis() throws HighChartsException {
-		Axis testAxis = new Axis();
-		testAxis.setAxisType(Axis.AxisType.xAxis);
+		Axis testAxis = new Axis(Axis.AxisType.xAxis);
 		testAxis.setLineWidth(2);
 		testAxis.setLineColor(Color.BLUE);
 		testAxis.getCategories().add("Fruits");

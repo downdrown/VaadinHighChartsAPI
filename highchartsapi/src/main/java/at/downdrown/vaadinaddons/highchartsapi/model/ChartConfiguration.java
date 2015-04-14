@@ -335,7 +335,7 @@ public class ChartConfiguration {
 
         //Set Subtitle if any was given
         builder.append(", subtitle: { ");
-        if (getTitle() != null) {
+        if (getSubTitle() != null) {
             builder.append("text: '" + subTitle + "'");
         } else {
             builder.append("text: null");
