@@ -6,7 +6,7 @@ Any feature request will be appreciated and i will try to implement it.
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/highchartsapi
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory#!addon/highchartsapi-add-on
 
 ## Building and running demo
 
