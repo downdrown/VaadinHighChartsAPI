@@ -1,69 +1,63 @@
 # HighChartsAPI Add-on for Vaadin 7
 
-HighChartsAPI is an UI component add-on for Vaadin 7.
+I've decided to implement a easy-to-use graphing tool since there were only expensive solutions for this.
 
-## Online demo
-
-Try the add-on demo at <url of the online demo>
+Any feature request will be appreciated and i will try to implement it.
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/highchartsapi
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory#!addon/highchartsapi-add-on
 
 ## Building and running demo
 
 git clone <url of the HighChartsAPI repository>
 mvn clean install
-cd demo
+cd highchartsapi-demo
 mvn jetty:run
 
 To see the demo, navigate to http://localhost:8080/
-
-## Development with Eclipse IDE
-
-For further development of this add-on, the following tool-chain is recommended:
-- Eclipse IDE
-- m2e wtp plug-in (install it from Eclipse Marketplace)
-- Vaadin Eclipse plug-in (install it from Eclipse Marketplace)
-- JRebel Eclipse plug-in (install it from Eclipse Marketplace)
-- Chrome browser
-
-### Importing project
-
-Choose File > Import... > Existing Maven Projects
-
-Note that Eclipse may give "Plugin execution not covered by lifecycle configuration" errors for pom.xml. Use "Permanently mark goal resources in pom.xml as ignored in Eclipse build" quick-fix to mark these errors as permanently ignored in your project. Do not worry, the project still works fine. 
-
-### Debugging server-side
-
-If you have not already compiled the widgetset, do it now by running vaadin:install Maven target for highchartsapi-root project.
-
-If you have a JRebel license, it makes on the fly code changes faster. Just add JRebel nature to your highchartsapi-demo project by clicking project with right mouse button and choosing JRebel > Add JRebel Nature
-
-To debug project and make code modifications on the fly in the server-side, right-click the highchartsapi-demo project and choose Debug As > Debug on Server. Navigate to http://localhost:8080/highchartsapi-demo/ to see the application.
-
-### Debugging client-side
-
-The most common way of debugging and making changes to the client-side code is dev-mode. To create debug configuration for it, open highchartsapi-demo project properties and click "Create Development Mode Launch" button on the Vaadin tab. Right-click newly added "GWT development mode for highchartsapi-demo.launch" and choose Debug As > Debug Configurations... Open up Classpath tab for the development mode configuration and choose User Entries. Click Advanced... and select Add Folders. Choose Java and Resources under highchartsapi/src/main and click ok. Now you are ready to start debugging the client-side code by clicking debug. Click Launch Default Browser button in the GWT Development Mode in the launched application. Now you can modify and breakpoints to client-side classes and see changes by reloading the web page. 
-
-Another way of debugging client-side is superdev mode. To enable it, uncomment devModeRedirectEnabled line from the end of DemoWidgetSet.gwt.xml located under highchartsapi-demo resources folder and compile the widgetset once by running vaadin:compile Maven target for highchartsapi-demo. Refresh highchartsapi-demo project resources by right clicking the project and choosing Refresh. Click "Create SuperDevMode Launch" button on the Vaadin tab of the highchartsapi-demo project properties panel to create superder mode code server launch configuration and modify the class path as instructed above. After starting the code server by running SuperDevMode launch as Java application, you can navigate to http://localhost:8080/highchartsapi-demo/?superdevmode. Now all code changes you do to your client side will get compiled as soon as you reload the web page. You can also access Java-sources and set breakpoints inside Chrome if you enable source maps from inspector settings. 
-
  
 ## Release notes
 
-### Version 1.5
-- ...
-- ...
+### Version 1.5 (Experminetal)
+- Basic functionality is implemented. More updates will be uploaded soon.
+ 
+### Version 1.6 (Experminetal)
+- Different instantiation (!!!) - Take a look at the Code Samples for further info!
+- Empty Title
+- Default Background is now transparent
+- LineChart
+- BarChart
+- Margin for Chart
+- Colors interface
+- Changing Chart Colors
+- (JavaDoc)
+- (Demo UI)
+ 
+### Version 1.7 (Experminetal)
+- Axis Component improvements
+- PieChartPlotOptions (Will defaultly be used when none is set)
+- Changed default chart look & feel
+- Removed xAxis, yAxis components
 
-## Roadmap
+### Version 1.7.1 (Experminetal)
+- Axis Component improvements (Axis Title, GridLine Behavior)
+- ChartConfiguration improvements
 
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-- ...
-- ...
+### Version 1.7.2 (Beta)
+- Version problem solved (Addon was bound to Vaadin 7.4.2)
+- Added AreaChartSeries
+- Added AreaChartPlotOptions
+- Added BarChartPlotOptions
+- Added ColumnChartPlotOptions
+- Added LineChartPlotOptions
+- Changed default chartConfiguration behaviour
+- Added 'default colors' to chartConfiguration
 
 ## Issue tracking
 
-The issues for this add-on are tracked on its github.com page. All bug reports and feature requests are appreciated. 
+The issues for this add-on are tracked on its github.com page.
+All bug reports and feature requests are appreciated. 
 
 ## Contributions
 
@@ -75,36 +69,12 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - Send a pull request for the original project
 - Comment on the original issue that you have implemented a fix for it
 
+## Usage
+
+Please take a look at the Project's wiki page for further information.
+
 ## License & Author
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-HighChartsAPI is written by <...>
-
-# Developer Guide
-
-## Getting started
-
-Here is a simple example on how to try out the add-on component:
-
-<...>
-
-For a more comprehensive example, see src/test/java/org/vaadin/template/demo/DemoUI.java
-
-## Features
-
-### Feature A
-
-<...>
-
-### Feature B
-
-<...>
-
-### Feature C
-
-<...>
-
-## API
-
-HighChartsAPI JavaDoc is available online at <...>
+HighChartsAPI is written by Manfred Huber
