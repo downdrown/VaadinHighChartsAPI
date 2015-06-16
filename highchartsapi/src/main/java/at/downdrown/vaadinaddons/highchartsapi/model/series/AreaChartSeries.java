@@ -11,7 +11,7 @@ import java.util.List;
 
 public class AreaChartSeries implements HighChartsSeries {
 
-    private final ChartType chartType = ChartType.LINE;
+    private final ChartType chartType = ChartType.AREA;
     private String name;
     private List<Object> data = new ArrayList<Object>();
 

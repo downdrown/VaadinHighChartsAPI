@@ -138,7 +138,6 @@ public class DemoUI extends UI {
         columnConfiguration.setChartType(ChartType.COLUMN);
         columnConfiguration.setBackgroundColor(Colors.WHITE);
 
-
         List<Object> bananaColumnValues = new ArrayList<Object>();
         bananaColumnValues.add(11.3);
         bananaColumnValues.add(25.1);

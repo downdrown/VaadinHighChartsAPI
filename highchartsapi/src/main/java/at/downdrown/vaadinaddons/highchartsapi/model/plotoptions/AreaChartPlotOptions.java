@@ -10,7 +10,7 @@ import com.vaadin.shared.ui.colorpicker.Color;
 
 public class AreaChartPlotOptions implements HighChartsPlotOptions {
 
-    private final ChartType chartType = ChartType.BAR;
+    private final ChartType chartType = ChartType.AREA;
     private boolean dataLabelsEnabled = true;
     private String dataLabelsFont = "Trebuchet MS";
     private String dataLabelFontWeight = "thin";

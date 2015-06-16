@@ -32,3 +32,7 @@
 + Added LineChartPlotOptions
 + Changed default chartConfiguration behaviour
 + Added 'default colors' to chartConfiguration
+
+### Version 2.0.0
++ Fixed issue #2
++ Fixed issue #4

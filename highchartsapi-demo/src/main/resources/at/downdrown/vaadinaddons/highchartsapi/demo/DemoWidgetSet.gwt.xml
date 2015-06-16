@@ -7,7 +7,7 @@
     -->
 
     <!-- Inherit add-on widgetset -->
-    <inherits name="at.downdrown.vaadinaddons.highchartsapi.WidgetSet" />
+
 
     <!--
      Uncomment the following to compile the widgetset for one browser only.
@@ -31,4 +31,7 @@
 
 
     <inherits name="com.vaadin.DefaultWidgetSet"/>
+
+
+    <inherits name="at.downdrown.vaadinaddons.highchartsapi.WidgetSet"/>
 </module>

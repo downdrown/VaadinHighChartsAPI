@@ -41,7 +41,6 @@ public class ChartConfiguration {
 
     //Constructors
     public ChartConfiguration() {
-
         //Add default chart colors for special look & feel.
         this.colors.add(Colors.LIGHTSKYBLUE);
         this.colors.add(Colors.LIGHTGREEN);
@@ -385,7 +384,7 @@ public class ChartConfiguration {
             builder.append("]");
         }
 
-        if (!getColors().isEmpty()) {
+        if (!this.colors.isEmpty()) {
             int colorsNr = 1;
             builder.append(", colors: [");
             for (Color color : getColors()) {
