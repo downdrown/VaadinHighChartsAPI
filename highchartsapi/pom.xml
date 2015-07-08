@@ -2,12 +2,16 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>at.downdrown.vaadinaddons</groupId>
 	<artifactId>highchartsapi</artifactId>
 	<packaging>jar</packaging>
-	<version>2.0.0</version>
 	<name>HighChartsAPI Add-on</name>
 	<inceptionYear>2015</inceptionYear>
+
+	<parent>
+		<groupId>at.downdrown.vaadinaddons</groupId>
+		<artifactId>highchartsapi-root</artifactId>
+		<version>2.1.0-SNAPSHOT</version>
+	</parent>
 
 	<organization>
 		<name>downdrown</name>
@@ -210,22 +214,6 @@
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
-			</resource>
-
-			<resource>
-				<directory>src/main/java/at/downdrown/vaadinaddons/highchartsapi/</directory>
-				<targetPath>at/downdrown/vaadinaddons/highchartsapi/</targetPath>
-				<includes>
-					<include>highcharts-connector.js</include>
-				</includes>
-			</resource>
-
-			<resource>
-				<directory>src/main/java/at/downdrown/vaadinaddons/highchartsapi/widgetset/</directory>
-				<targetPath>at/downdrown/vaadinaddons/highchartsapi/</targetPath>
-				<includes>
-					<include>WidgetSet.gwt.xml</include>
-				</includes>
 			</resource>
 		</resources>
 
