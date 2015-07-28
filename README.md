@@ -54,6 +54,14 @@ To see the demo, navigate to http://localhost:8080/
 - Changed default chartConfiguration behaviour
 - Added 'default colors' to chartConfiguration
 
+### Version 2.0.0
+- Fixed issue #2
+- Fixed issue #4
+
+### Version 2.1.2
+- Fixed issue #7
+- Fixed issue #9
+
 ## Issue tracking
 
 The issues for this add-on are tracked on its github.com page.
