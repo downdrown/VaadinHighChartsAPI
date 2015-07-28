@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>at.downdrown.vaadinaddons</groupId>
 		<artifactId>highchartsapi-root</artifactId>
-		<version>2.1.0-SNAPSHOT</version>
+		<version>2.1.2</version>
 	</parent>
 
 	<organization>
@@ -27,10 +27,10 @@
 	</developers>
 
 	<properties>
+		<javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>[7.3.10, 7.4.3]</vaadin.version>
+		<vaadin.version>[7.3.10, 7.4.8]</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-
 		<!-- ZIP Manifest fields -->
 		<Implementation-Version>${project.version}</Implementation-Version>
 		<!-- Must not change this because of the Directory -->
@@ -40,12 +40,19 @@
 		<Vaadin-Addon>${artifactId}-${project.version}.jar</Vaadin-Addon>
 	</properties>
 
-	<scm>
-		<url>git://github.com/downdrown/VaadinHighChartsAPI.git</url>
-		<connection>scm:git:git://github.com/downdrown/VaadinHighChartsAPI.git</connection>
-		<developerConnection>scm:git:ssh://downdrown@github.com:/downdrown/VaadinHighChartsAPI.git</developerConnection>
-		<tag>HighChartsAPI add-on for Vaadin</tag>
-	</scm>
+	<distributionManagement>
+		<repository>
+			<id>vaadin_dev</id>
+			<url>http://homeserver.home:8081/nexus/content/repositories/vaadin_dev</url>
+		</repository>
+	</distributionManagement>
+
+	<!--<scm>-->
+	<!--<url>git://github.com/downdrown/VaadinHighChartsAPI.git</url>-->
+	<!--<connection>scm:git:git://github.com/downdrown/VaadinHighChartsAPI.git</connection>-->
+	<!--<developerConnection>scm:git:ssh://downdrown@github.com:/downdrown/VaadinHighChartsAPI.git</developerConnection>-->
+	<!--<tag>HighChartsAPI add-on for Vaadin</tag>-->
+	<!--</scm>-->
 
 	<issueManagement>
 		<system>GitHub</system>
@@ -115,7 +122,6 @@
 	<build>
 
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -141,7 +147,7 @@
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-							<Vaadin-Widgetsets>at.downdrown.vaadinaddons.highchartsapi.WidgetSet</Vaadin-Widgetsets>
+							<!--<Vaadin-Widgetsets>at.downdrown.vaadinaddons.highchartsapi.WidgetSet</Vaadin-Widgetsets>-->
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -195,15 +201,38 @@
 				</executions>
 			</plugin>
 
-			<!-- Testing -->
+			<!--Testing-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.14.1</version>
 			</plugin>
+
+			<!--Sass Compiler-->
+			<!--<plugin>-->
+			<!--<groupId>org.codehaus.mojo</groupId>-->
+			<!--<artifactId>exec-maven-plugin</artifactId>-->
+			<!--<version>1.2.1</version>-->
+			<!--<executions>-->
+			<!--<execution>-->
+			<!--<phase>generate-sources</phase>-->
+			<!--<goals>-->
+			<!--<goal>java</goal>-->
+			<!--</goals>-->
+			<!--<configuration>-->
+			<!--<classpathScope>compile</classpathScope>-->
+			<!--<mainClass>com.vaadin.sass.SassCompiler</mainClass>-->
+			<!--<arguments>-->
+			<!--<argument>src/main/webapp/VAADIN/themes/heijunka/styles.scss</argument>-->
+			<!--<argument>src/main/webapp/VAADIN/themes/heijunka/styles.css</argument>-->
+			<!--</arguments>-->
+			<!--</configuration>-->
+			<!--</execution>-->
+			<!--</executions>-->
+			<!--</plugin>-->
 		</plugins>
 
-		<!-- This is needed for the sources required by the client-side compiler to be 
+		<!-- This is needed for the sources required by the client-side compiler to be
 			included in the produced JARs -->
 		<resources>
 			<resource>

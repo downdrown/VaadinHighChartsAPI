@@ -27,10 +27,10 @@
             <param-name>UI</param-name>
             <param-value>at.downdrown.vaadinaddons.highchartsapi.demo.DemoUI</param-value>
         </init-param>
-        <init-param>
-            <param-name>widgetset</param-name>
-            <param-value>at.downdrown.vaadinaddons.highchartsapi.demo.DemoWidgetSet</param-value>
-        </init-param>
+        <!--<init-param>-->
+        <!--<param-name>widgetset</param-name>-->
+        <!--<param-value>at.downdrown.vaadinaddons.highchartsapi.demo.DemoWidgetSet</param-value>-->
+        <!--</init-param>-->
         <init-param>
             <param-name>closeIdleSessions</param-name>
             <param-value>true</param-value>

@@ -1,23 +1,23 @@
 ### Version 1.5
-+Basic Functionality.
++ Basic Functionality.
 
 ### Version 1.6
-+Different instantiation (!!!) - Take a look at the Code Samples for further info!
-+Empty Title
-+Default Background is now transparent
-+LineChart
-+BarChart
-+Margin for Chart
-+Colors interface
-+Changing Chart Colors
-+(JavaDoc)
-+(Demo UI)
++ Different instantiation (!!!) - Take a look at the Code Samples for further info!
++ Empty Title
++ Default Background is now transparent
++ LineChart
++ BarChart
++ Margin for Chart
++ Colors interface
++ Changing Chart Colors
++ (JavaDoc)
++ (Demo UI)
 
 ### Version 1.7
-+Axis Component improvements
-+PieChartPlotOptions (Will defaultly be used when none is set)
-+Changed default chart look & feel
-+Removed xAxis, yAxis components
++ Axis Component improvements
++ PieChartPlotOptions (Will defaultly be used when none is set)
++ Changed default chart look & feel
++ Removed xAxis, yAxis components
 
 ### Version 1.7.1 (Pre-Release)
 + Axis Component improvements (Axis Title, GridLine Behavior)
@@ -36,3 +36,7 @@
 ### Version 2.0.0
 + Fixed issue #2
 + Fixed issue #4
+
+### Version 2.1.2
++ Fixed issue #7
++ Fixed issue #9
