@@ -62,6 +62,10 @@ To see the demo, navigate to http://localhost:8080/
 - Fixed issue #7
 - Fixed issue #9
 
+### Version 2.2.0
+- Project setup fix
+- Fixed a maven issue where you got a "could not read artifact descriptor" error
+
 ## Issue tracking
 
 The issues for this add-on are tracked on its github.com page.
