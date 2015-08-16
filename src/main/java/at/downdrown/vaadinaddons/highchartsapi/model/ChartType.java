@@ -4,6 +4,9 @@
 
 package at.downdrown.vaadinaddons.highchartsapi.model;
 
+/**
+ * Contains all implementet chart types.
+ */
 public enum ChartType {
     AREA("area"),
     BAR("bar"),
@@ -12,7 +15,6 @@ public enum ChartType {
     PIE("pie");
 
     private String highchartsvalue;
-
 
     ChartType(String highchartsvalue) {
         this.highchartsvalue = highchartsvalue;

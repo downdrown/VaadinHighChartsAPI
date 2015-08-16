@@ -417,6 +417,10 @@ public class ChartConfiguration {
         return builder.toString();
     }
 
+    /**
+     * Removes the grid lines from your chart configuration.
+     * Must be called before {@link at.downdrown.vaadinaddons.highchartsapi.HighChartFactory#renderChart(ChartConfiguration)} to take effect.
+     */
     public void removeBackgroundLines() {
         this.xAxis.setLineWidth(0);
         this.xAxis.setGridLineWidth(0);

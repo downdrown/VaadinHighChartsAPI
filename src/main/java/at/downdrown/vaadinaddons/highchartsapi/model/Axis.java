@@ -25,9 +25,17 @@ public class Axis {
     private int tickLength = 1;
     private int gridLineWidth = 1;
 
+    @Deprecated
+    /**
+     * Can cause an Exception if you forget to set an {@link at.downdrown.vaadinaddons.highchartsapi.model.Axis.AxisType}, use {@link #Axis(AxisType)} instead.
+     */
     public Axis() {
     }
 
+    /**
+     * Default constructor.
+     * @param axisType - Type of axis you want to create.
+     */
     public Axis(AxisType axisType) {
         this.axisType = axisType;
     }
@@ -98,7 +106,7 @@ public class Axis {
     }
 
     /**
-     * Return the current line color.
+     * Returns the current line color.
      * @return {@link Color}
      */
     public Color getLineColor() {
@@ -114,46 +122,90 @@ public class Axis {
         this.lineColor = lineColor;
     }
 
+    /**
+     * Returns the current line width.
+     * @return {@link Integer}
+     */
     public int getLineWidth() {
         return lineWidth;
     }
 
+    /**
+     * Set the line width for the current instance.
+     * @param lineWidth - The line width you want to set.
+     */
     public void setLineWidth(int lineWidth) {
         this.lineWidth = lineWidth;
     }
 
+    /**
+     * Returns if the first label is shown.
+     * @return {@link Boolean}
+     */
     public boolean isShowFirstLabel() {
         return showFirstLabel;
     }
 
+    /**
+     * Set if the first label shall be shown or not.
+     * @param showFirstLabel
+     */
     public void setShowFirstLabel(boolean showFirstLabel) {
         this.showFirstLabel = showFirstLabel;
     }
 
+    /**
+     * Returns if the last label is shown.
+     * @return {@link Boolean}
+     */
     public boolean isShowLastLabel() {
         return showLastLabel;
     }
 
+    /**
+     * Set if the last label shall be shown or not.
+     * @param showLastLabel
+     */
     public void setShowLastLabel(boolean showLastLabel) {
         this.showLastLabel = showLastLabel;
     }
 
+    /**
+     * Returns if the labels are enabled or not.
+     * @return {@link Boolean}
+     */
     public boolean isLabelsEnabled() {
         return labelsEnabled;
     }
 
+    /**
+     * Set if the labels shall be enabled or not.
+     * @param labelsEnabled
+     */
     public void setLabelsEnabled(boolean labelsEnabled) {
         this.labelsEnabled = labelsEnabled;
     }
 
+    /**
+     * Returns if decimals are allowed or not.
+     * @return {@link Boolean}
+     */
     public boolean isAllowDecimals() {
         return allowDecimals;
     }
 
+    /**
+     * Set if decimals shall be allowed or not.
+     * @param allowDecimals
+     */
     public void setAllowDecimals(boolean allowDecimals) {
         this.allowDecimals = allowDecimals;
     }
 
+    /**
+     * Returns the current tick length.
+     * @return {@link Integer}
+     */
     public int getTickLength() {
         return tickLength;
     }
@@ -161,7 +213,7 @@ public class Axis {
     /**
      * Set the chart's tickLength.
      *
-     * @param tickLength the chart's tickLength.
+     * @param tickLength - The tick length you want to set.
      */
     public void setTickLength(int tickLength) {
         this.tickLength = tickLength;
