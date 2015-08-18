@@ -44,3 +44,5 @@
 ### Version 2.2.0
 + Project setup fix
 + Fixed a maven issue where you got a "could not read artifact descriptor" error
++ Added 'reRendering()' functionality - experimental
++ Added ScatterPlot Chart Type

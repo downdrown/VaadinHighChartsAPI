@@ -4,8 +4,10 @@
 
 package at.downdrown.vaadinaddons.highchartsapi;
 
+import at.downdrown.vaadinaddons.highchartsapi.exceptions.HighChartsException;
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartConfiguration;
 import com.vaadin.ui.AbstractJavaScriptComponent;
+import com.vaadin.ui.AbstractOrderedLayout;
 
 public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
     private static final long serialVersionUID = 7738496276049495017L;
@@ -27,7 +29,24 @@ public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
     }
 
     /**
-     * Returns the stage of the chart that is shared with the web browser.
+     * Re-Renders your chart.
+     * Make sure you set your new {@link ChartConfiguration} <b><u>BEFORE</u></b> you call {@link #reRender()}.
+     *
+     * @throws HighChartsException
+     */
+    public void reRender() throws HighChartsException {
+        int componentIndex;
+        ChartConfiguration configuration = this.getChartConfiguration();
+
+        AbstractOrderedLayout container = (AbstractOrderedLayout) this.getParent();
+        componentIndex = container.getComponentIndex(this);
+        container.getComponentIndex(this);
+        container.removeComponent(this);
+        container.addComponent(HighChartFactory.renderChart(configuration), componentIndex);
+    }
+
+    /**
+     * Returns the state of the chart that is shared with the web browser.
      */
     @Override
     protected HighChartState getState() {
@@ -37,7 +56,7 @@ public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
     /**
      * Returns the DOM ID of the chart component.
      *
-     * @return DOM ID of the chart component
+     * @return {@link String}
      */
     public String getDomId() {
         return "highchart_" + chartId;
@@ -58,7 +77,7 @@ public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
     /**
      * Returns the chart's configuration object.
      *
-     * @return {@link ChartConfiguration} object.
+     * @return {@link ChartConfiguration}
      */
     public ChartConfiguration getChartConfiguration() {
         return chartConfiguration;

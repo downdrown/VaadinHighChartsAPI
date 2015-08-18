@@ -29,4 +29,10 @@ public class HighChartFactory {
         return tempChart;
     }
 
+
+    public static void reRenderChart(HighChart chart) throws HighChartsException {
+        ChartConfiguration configuration = chart.getChartConfiguration();
+        chart.setImmediate(true);
+        chart = renderChart(configuration);
+    }
 }
