@@ -403,6 +403,7 @@ public class ChartConfiguration {
             if (this.plotOptions.getChartType() != this.chartType) {
                 throw new WrongPlotOptionsException("Different chart types in configuration and plotOptions.");
             } else {
+                //Plotoptions added here.
                 builder.append(this.plotOptions.getHighChartValue());
             }
         } else {
