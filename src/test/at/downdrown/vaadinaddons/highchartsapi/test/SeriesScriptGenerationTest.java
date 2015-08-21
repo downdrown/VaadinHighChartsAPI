@@ -116,5 +116,41 @@ public class SeriesScriptGenerationTest {
 
         System.out.println(areaSplineChartSeries.getHighChartValue());
 
+
+        AreaSplineRangeChartSeries areaSplineRangeChartSeries = new AreaSplineRangeChartSeries("areaSplineRangeChartScript");
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124640640, 14.3, 27.7));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124649280, 14.5, 27.8));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124657920, 15.5, 29.6));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124666560, 16.7, 30.7));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124675200, 16.5, 25.0));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124683840, 17.8, 25.7));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124692480, 13.5, 24.8));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124701120, 10.5, 21.4));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124709760, 9.2, 23.8));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124718400, 11.6, 21.8));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124727040, 10.7, 23.7));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124735680, 11.0, 23.3));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124744320, 11.6, 23.7));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124752960, 11.8, 20.7));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124761600, 12.6, 22.4));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124770240, 13.6, 19.6));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124778880, 11.4, 22.6));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124787520, 13.2, 25.0));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124796160, 14.2, 21.6));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124804800, 13.1, 17.1));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124813440, 12.2, 15.5));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124822080, 12.0, 20.8));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124830720, 12.0, 17.1));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124839360, 12.7, 18.3));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124848000, 12.4, 19.4));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124856640, 12.6, 19.9));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124865280, 11.9, 20.2));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124873920, 11.0, 19.3));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124882560, 10.8, 17.8));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124891200, 11.8, 18.5));
+        areaSplineRangeChartSeries.addData(new AreaSplineRangeChartData(124899840, 10.8, 16.1));
+
+        System.out.println(areaSplineRangeChartSeries.getHighChartValue());
+
     }
 }
