@@ -104,5 +104,17 @@ public class SeriesScriptGenerationTest {
 
         System.out.println(areaRangeChartSeries.getHighChartValue());
 
+
+        AreaSplineChartSeries areaSplineChartSeries = new AreaSplineChartSeries("areaSplineChartScript");
+        areaSplineChartSeries.addData(3);
+        areaSplineChartSeries.addData(5);
+        areaSplineChartSeries.addData(1);
+        areaSplineChartSeries.addData(6);
+        areaSplineChartSeries.addData(4);
+        areaSplineChartSeries.addData(2);
+
+
+        System.out.println(areaSplineChartSeries.getHighChartValue());
+
     }
 }
