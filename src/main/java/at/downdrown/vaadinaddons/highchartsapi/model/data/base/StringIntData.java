@@ -1,12 +1,10 @@
 package at.downdrown.vaadinaddons.highchartsapi.model.data.base;
 
-import at.downdrown.vaadinaddons.highchartsapi.model.data.HighChartsData;
-
 /**
  * You can use this type of data if you want to specify the name of your values.
  * The name will be displayed in a tooltip if you hover over your points.
  */
-public class StringIntData implements HighChartsData {
+public class StringIntData implements HighChartsBaseData {
     private String name;
     private int value;
 

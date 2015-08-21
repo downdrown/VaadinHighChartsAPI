@@ -1,11 +1,9 @@
 package at.downdrown.vaadinaddons.highchartsapi.model.data.base;
 
-import at.downdrown.vaadinaddons.highchartsapi.model.data.HighChartsData;
-
 /**
  * You can use this type of data to explicit manually set x and y value for your data.
  */
-public class DoubleDoubleData implements HighChartsData {
+public class DoubleDoubleData implements HighChartsBaseData {
 
     private double xVal;
     private double yVal;

@@ -53,31 +53,65 @@ public class PieChartSeries extends HighChartsSeriesImpl {
         return builder.toString();
     }
 
+    public void addData(PieChartData pieChartData) {
+        this.data.add(pieChartData);
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
     public void addData(DoubleDoubleData doubleDoubleData) {
         throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
     }
 
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
     public void addData(DoubleIntData doubleIntData) {
         throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
     }
 
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
     public void addData(IntDoubleData intDoubleData) {
         throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
     }
 
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
     public void addData(IntIntData intIntData) {
         throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
     }
 
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
     public void addData(StringDoubleData stringDoubleData) {
         throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
     }
 
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
     public void addData(StringIntData stringIntData) {
         throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
