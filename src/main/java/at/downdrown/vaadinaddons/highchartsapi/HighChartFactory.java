@@ -28,11 +28,4 @@ public class HighChartFactory {
         tempChart.setChartConfiguration(configuration);
         return tempChart;
     }
-
-
-    public static void reRenderChart(HighChart chart) throws HighChartsException {
-        ChartConfiguration configuration = chart.getChartConfiguration();
-        chart.setImmediate(true);
-        chart = renderChart(configuration);
-    }
 }

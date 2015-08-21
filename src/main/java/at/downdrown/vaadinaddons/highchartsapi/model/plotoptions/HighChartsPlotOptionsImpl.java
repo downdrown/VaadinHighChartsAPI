@@ -14,12 +14,16 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
     private boolean dataLabelsEnabled = true;
     private String dataLabelsFont = "Trebuchet MS";
     private String dataLabelFontWeight = "thin";
+    private DashStyle dashStyle = DashStyle.Solid;
     private Color dataLabelsFontColor = Colors.DIMGRAY;
     private int dataLabelsFontSize = 15;
     private boolean allowPointSelect = true;
     private boolean animated = true;
     private boolean shadow = false;
     private boolean textShadow = false;
+    private boolean showCheckBox = false;
+    private boolean connectNulls = false;
+    private Steps steps = Steps.FALSE;
 
     /**
      * Returns if datalabels are enabled.
@@ -166,6 +170,80 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
         this.shadow = shadow;
     }
 
+    /**
+     * Returns the current dashstyle.
+     *
+     * @return {@link at.downdrown.vaadinaddons.highchartsapi.model.plotoptions.HighChartsPlotOptionsImpl.DashStyle}
+     */
+    public DashStyle getDashStyle() {
+        return dashStyle;
+    }
+
+    /**
+     * Set the dash style.
+     *
+     * @param dashStyle The {@link at.downdrown.vaadinaddons.highchartsapi.model.plotoptions.HighChartsPlotOptionsImpl.DashStyle} you want to set.
+     */
+    public void setDashStyle(DashStyle dashStyle) {
+        this.dashStyle = dashStyle;
+    }
+
+    /**
+     * Returns if there series checkbox is enabled.
+     *
+     * @return {@link Boolean}
+     */
+    public boolean isShowCheckBox() {
+        return showCheckBox;
+    }
+
+    /**
+     * If set to true, there will be a little Checkbox in the Legend from where you can choose
+     * which series yo want to see in the chart.
+     *
+     * @param showCheckBox
+     */
+    public void setShowCheckBox(boolean showCheckBox) {
+        this.showCheckBox = showCheckBox;
+    }
+
+    /**
+     * Returns if the chart gets connected over null points.
+     *
+     * @return {@link Boolean}
+     */
+    public boolean isConnectNulls() {
+        return connectNulls;
+    }
+
+    /**
+     * Set if the chart should be connected over null points.
+     *
+     * @param connectNulls
+     */
+    public void setConnectNulls(boolean connectNulls) {
+        this.connectNulls = connectNulls;
+    }
+
+    /**
+     * Returns the steps property.
+     *
+     * @return {@link at.downdrown.vaadinaddons.highchartsapi.model.plotoptions.HighChartsPlotOptionsImpl.Steps}
+     */
+    public Steps getSteps() {
+        return steps;
+    }
+
+    /**
+     * Whether to apply steps to the chart.
+     *
+     * @param steps The value you want to set.
+     */
+    public void setSteps(Steps steps) {
+        this.steps = steps;
+    }
+
+
     @Override
     public ChartType getChartType() {
         return this.chartType;
@@ -175,8 +253,12 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
     public String getHighChartValue() {
         StringBuilder builder = new StringBuilder();
         builder.append(", plotOptions: { ");
-        builder.append(this.chartType.name().toLowerCase() + ": { ");
+        builder.append(chartType.getHighChartValue().toLowerCase() + ": { ");
         builder.append("allowPointSelect: " + allowPointSelect);
+        builder.append(", dashStyle: '" + dashStyle.name() +"'");
+        builder.append(", showCheckbox: " + showCheckBox);
+        builder.append(", step: " + steps.name());
+        builder.append(", connectNulls: " + connectNulls);
         builder.append(", animation: " + animated);
         builder.append(", shadow: " + shadow);
         builder.append(", dataLabels: { ");
@@ -193,4 +275,26 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
         builder.append(" }");
         return builder.toString();
     }
+
+    public enum DashStyle {
+        Solid,
+        ShortDash,
+        ShortDot,
+        ShortDashDot,
+        ShortDashDotDot,
+        Dot,
+        Dash,
+        LongDash,
+        DashDot,
+        LongDashDot,
+        LongDashDotDot;
+    }
+
+    public enum Steps {
+        LEFT,
+        CENTER,
+        RIGHT,
+        FALSE
+    }
+
 }

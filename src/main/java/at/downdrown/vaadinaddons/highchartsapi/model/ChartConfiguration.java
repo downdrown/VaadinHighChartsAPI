@@ -315,7 +315,7 @@ public class ChartConfiguration {
         builder.append("{");
         //Chart properties
         builder.append("chart: { renderTo: 'container' ");
-        builder.append(",type: '" + getChartType().getHighchartsvalue() + "'");
+        builder.append(",type: '" + getChartType().getHighChartValue() + "'");
         //Set Background
         if (getBackgroundColor() != null) {
             builder.append(",backgroundColor: '" + getBackgroundColor().getCSS() + "'");
