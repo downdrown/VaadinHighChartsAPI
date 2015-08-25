@@ -12,13 +12,13 @@ import at.downdrown.vaadinaddons.highchartsapi.model.data.HighChartsData;
  *
  * @author Manfred Huber (02ub0j08)<br>
  */
-public class AreaSplineRangeChartData implements HighChartsData {
+public class RangeData implements HighChartsData {
 
     private double x;
     private double low;
     private double high;
 
-    public AreaSplineRangeChartData(double x, double low, double high) {
+    public RangeData(double x, double low, double high) {
         this.x = x;
         this.low = low;
         this.high = high;

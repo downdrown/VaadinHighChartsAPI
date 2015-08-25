@@ -1,6 +1,8 @@
 package at.downdrown.vaadinaddons.highchartsapi.model.series;
 
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartType;
+import at.downdrown.vaadinaddons.highchartsapi.model.data.HighChartsData;
+
 import java.util.List;
 
 public class BarChartSeries extends HighChartsSeriesImpl {
@@ -10,19 +12,19 @@ public class BarChartSeries extends HighChartsSeriesImpl {
         this.name = name;
     }
 
-    public BarChartSeries(String name, List<Object> data) {
+    public BarChartSeries(String name, List<HighChartsData> data) {
         chartType = ChartType.BAR;
         this.name = name;
         this.data = data;
     }
 
     @Deprecated
-    public List<Object> getData() {
+    public List<HighChartsData> getData() {
         return this.data;
     }
 
     @Deprecated
-    public void setData(List<Object> data) {
+    public void setData(List<HighChartsData> data) {
         this.data = data;
     }
 

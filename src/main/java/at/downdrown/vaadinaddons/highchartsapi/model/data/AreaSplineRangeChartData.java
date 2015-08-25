@@ -12,9 +12,9 @@ import at.downdrown.vaadinaddons.highchartsapi.model.data.base.RangeData;
  *
  * @author Manfred Huber (02ub0j08)<br>
  */
-public class AreaRangeChartData extends RangeData {
+public class AreaSplineRangeChartData extends RangeData {
 
-    public AreaRangeChartData(double x, double low, double high) {
+    public AreaSplineRangeChartData(double x, double low, double high) {
         super(x, low, high);
     }
 

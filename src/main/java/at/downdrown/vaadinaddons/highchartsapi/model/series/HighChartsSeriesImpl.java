@@ -20,7 +20,7 @@ import java.util.List;
 public class HighChartsSeriesImpl implements HighChartsSeries {
 
     ChartType chartType;
-    List<Object> data = new ArrayList<Object>();
+    List<HighChartsData> data = new ArrayList<>();
     String name;
 
     public String getName() {
@@ -49,7 +49,7 @@ public class HighChartsSeriesImpl implements HighChartsSeries {
      */
     @Override
     public void addData(int value) {
-        this.data.add(value);
+        this.data.add(new IntData(value));
     }
 
     /**
@@ -59,7 +59,7 @@ public class HighChartsSeriesImpl implements HighChartsSeries {
      */
     @Override
     public void addData(double value) {
-        this.data.add(value);
+        this.data.add(new DoubleData(value));
     }
 
     /**
@@ -120,6 +120,14 @@ public class HighChartsSeriesImpl implements HighChartsSeries {
     @Override
     public void addData(StringIntData stringIntData) {
         this.data.add(stringIntData);
+    }
+
+    /**
+     * Clears the list of data.
+     */
+    @Override
+    public void clearData() {
+        this.data.clear();
     }
 
     @Override
