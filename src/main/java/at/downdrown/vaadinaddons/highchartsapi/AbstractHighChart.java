@@ -8,6 +8,8 @@ import at.downdrown.vaadinaddons.highchartsapi.exceptions.HighChartsException;
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartConfiguration;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.AbstractOrderedLayout;
+import com.vaadin.ui.JavaScript;
+
 
 public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
     private static final long serialVersionUID = 7738496276049495017L;
@@ -90,5 +92,13 @@ public abstract class AbstractHighChart extends AbstractJavaScriptComponent {
      */
     public void setChartConfiguration(ChartConfiguration chartConfiguration) {
         this.chartConfiguration = chartConfiguration;
+    }
+
+    /**
+     * Rerenders your chart configuration.
+     */
+    public void redraw(ChartConfiguration configuration) throws HighChartsException {
+        this.setChartoptions(configuration.getHighChartValue());
+        JavaScript.getCurrent().execute("$(#" + this.getDomId() + ").redraw();");
     }
 }

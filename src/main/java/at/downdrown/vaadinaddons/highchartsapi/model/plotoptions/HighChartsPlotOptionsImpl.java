@@ -253,7 +253,7 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
     public String getHighChartValue() {
         StringBuilder builder = new StringBuilder();
         builder.append(", plotOptions: { ");
-        builder.append(chartType.getHighChartValue().toLowerCase() + ": { ");
+        builder.append(chartType.getHighChartValue() + ": { ");
         builder.append("allowPointSelect: " + allowPointSelect);
         builder.append(", dashStyle: '" + dashStyle.name() +"'");
         builder.append(", showCheckbox: " + showCheckBox);
@@ -287,7 +287,7 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
         LongDash,
         DashDot,
         LongDashDot,
-        LongDashDotDot;
+        LongDashDotDot
     }
 
     public enum Steps {
