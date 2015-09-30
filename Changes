@@ -46,4 +46,8 @@
 + Fixed a maven issue where you got a "could not read artifact descriptor" error
 + Added 'reRendering()' functionality - experimental
 + PlotOptions merged into single-file-pattern
-+ Added ScatterPlot Chart Type
++ Added many remaining Chart types (not all tested yet)
+
+###Version 2.2.1
++ Fixed #13
++ Fixed #14

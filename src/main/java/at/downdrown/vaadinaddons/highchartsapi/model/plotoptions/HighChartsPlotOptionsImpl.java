@@ -257,7 +257,7 @@ public class HighChartsPlotOptionsImpl implements HighChartsPlotOptions {
         builder.append("allowPointSelect: " + allowPointSelect);
         builder.append(", dashStyle: '" + dashStyle.name() +"'");
         builder.append(", showCheckbox: " + showCheckBox);
-        builder.append(", step: " + steps.name());
+        builder.append(", step: '" + steps.name() + "'");
         builder.append(", connectNulls: " + connectNulls);
         builder.append(", animation: " + animated);
         builder.append(", shadow: " + shadow);
