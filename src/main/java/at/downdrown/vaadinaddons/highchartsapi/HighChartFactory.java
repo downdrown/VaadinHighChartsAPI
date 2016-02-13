@@ -28,5 +28,4 @@ public class HighChartFactory {
         tempChart.setChartConfiguration(configuration);
         return tempChart;
     }
-
 }

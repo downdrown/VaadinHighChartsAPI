@@ -6,8 +6,8 @@ package at.downdrown.vaadinaddons.highchartsapi.model.plotoptions;
 
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartType;
 
-public class AreaChartPlotOptions extends HighChartsPlotOptionsImpl {
-    public AreaChartPlotOptions() {
-        chartType = ChartType.AREA;
+public class AreaSplineChartPlotOptions extends HighChartsPlotOptionsImpl {
+    public AreaSplineChartPlotOptions() {
+        chartType = ChartType.AREASPLINE;
     }
 }

@@ -6,25 +6,17 @@ package at.downdrown.vaadinaddons.highchartsapi.model.series;
 
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartType;
 import at.downdrown.vaadinaddons.highchartsapi.model.data.PieChartData;
+import at.downdrown.vaadinaddons.highchartsapi.model.data.base.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PieChartSeries implements HighChartsSeries {
+public class PieChartSeries extends HighChartsSeriesImpl {
 
-    private final ChartType chartType = ChartType.PIE;
-    private String name;
     private List<PieChartData> data = new ArrayList<PieChartData>();
 
     public PieChartSeries(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+        this.chartType = ChartType.PIE;
         this.name = name;
     }
 
@@ -61,9 +53,68 @@ public class PieChartSeries implements HighChartsSeries {
         return builder.toString();
     }
 
+    public void addData(PieChartData pieChartData) {
+        this.data.add(pieChartData);
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
     @Override
-    public ChartType getChartType() {
-        return this.chartType;
+    public void addData(DoubleDoubleData doubleDoubleData) {
+        throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
+    @Override
+    public void addData(DoubleIntData doubleIntData) {
+        throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
+    @Override
+    public void addData(IntDoubleData intDoubleData) {
+        throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
+    @Override
+    public void addData(IntIntData intIntData) {
+        throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
+    @Override
+    public void addData(StringDoubleData stringDoubleData) {
+        throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
+    }
+
+    /**
+     * @deprecated This method isn't implemented for this type.
+     * Use {@link #addData(PieChartData)} instead.
+     */
+    @Deprecated
+    @Override
+    public void addData(StringIntData stringIntData) {
+        throw new UnsupportedOperationException("Pie charts only accept PieChartData objects.");
     }
 }
 

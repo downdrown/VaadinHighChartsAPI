@@ -1,53 +1,31 @@
-/*
- * Copyright (c) 2015 by Manfred Huber.
- */
-
 package at.downdrown.vaadinaddons.highchartsapi.model.series;
 
 import at.downdrown.vaadinaddons.highchartsapi.model.ChartType;
+import at.downdrown.vaadinaddons.highchartsapi.model.data.HighChartsData;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class ColumnChartSeries implements HighChartsSeries {
-
-    private final ChartType chartType = ChartType.COLUMN;
-
-    private String name;
-    private List<Object> data = new ArrayList<Object>();
+public class ColumnChartSeries extends HighChartsSeriesImpl {
 
     public ColumnChartSeries(String name) {
+        chartType = ChartType.COLUMN;
         this.name = name;
     }
 
-    public ColumnChartSeries(String name, List<Object> data) {
+    public ColumnChartSeries(String name, List<HighChartsData> data) {
+        chartType = ChartType.COLUMN;
         this.name = name;
         this.data = data;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Object> getData() {
+    @Deprecated
+    public List<HighChartsData> getData() {
         return data;
     }
 
-    public void setData(List<Object> data) {
+    @Deprecated
+    public void setData(List<HighChartsData> data) {
         this.data = data;
     }
 
-    @Override
-    public String getHighChartValue() {
-        return "{ name: '" + this.name + "', data: " + this.data + " }";
-    }
-
-    @Override
-    public ChartType getChartType() {
-        return this.chartType;
-    }
 }

@@ -4,9 +4,7 @@
 
 package at.downdrown.vaadinaddons.highchartsapi.model.data;
 
-import at.downdrown.vaadinaddons.highchartsapi.model.HighchartsObject;
-
-public class PieChartData implements HighchartsObject {
+public class PieChartData implements HighChartsData {
 
     private String name;
     private Object value;

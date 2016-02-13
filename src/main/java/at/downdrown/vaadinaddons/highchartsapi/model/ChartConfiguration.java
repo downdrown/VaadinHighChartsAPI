@@ -315,7 +315,7 @@ public class ChartConfiguration {
         builder.append("{");
         //Chart properties
         builder.append("chart: { renderTo: 'container' ");
-        builder.append(",type: '" + getChartType().getHighchartsvalue() + "'");
+        builder.append(",type: '" + getChartType().getHighChartValue() + "'");
         //Set Background
         if (getBackgroundColor() != null) {
             builder.append(",backgroundColor: '" + getBackgroundColor().getCSS() + "'");
@@ -403,6 +403,7 @@ public class ChartConfiguration {
             if (this.plotOptions.getChartType() != this.chartType) {
                 throw new WrongPlotOptionsException("Different chart types in configuration and plotOptions.");
             } else {
+                //Plotoptions added here.
                 builder.append(this.plotOptions.getHighChartValue());
             }
         } else {
