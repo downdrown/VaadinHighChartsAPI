@@ -17,6 +17,7 @@ public interface HighChartsSeries extends HighchartsObject {
     //Data manipulation
     void addData(HighChartsData highChartsData);
     void addData(int value);
+    void addData(float value);
     void addData(double value);
     void addData(DoubleDoubleData doubleDoubleData);
     void addData(DoubleIntData doubleIntData);

@@ -1,12 +1,10 @@
-package ru.skysoftlab.smarthome.heating.dto;
+package at.downdrown.vaadinaddons.highchartsapi.model.data.base;
 
-import at.downdrown.vaadinaddons.highchartsapi.model.data.HighChartsData;
-
-public class FloatChartData implements HighChartsBaseData {
+public class FloatData implements HighChartsBaseData {
 
 	private float value;
 
-	public FloatChartData(float value) {
+	public FloatData(float value) {
 		this.value = value;
 	}
 
