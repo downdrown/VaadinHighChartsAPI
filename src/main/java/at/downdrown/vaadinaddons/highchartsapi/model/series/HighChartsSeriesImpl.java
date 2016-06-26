@@ -43,7 +43,7 @@ public class HighChartsSeriesImpl implements HighChartsSeries {
     }
 
     /**
-     * Add an {@link Double} object to your series.
+     * Add an {@link Integer} object to your series.
      *
      * @param value - The object you want to add.
      */
@@ -51,9 +51,19 @@ public class HighChartsSeriesImpl implements HighChartsSeries {
     public void addData(int value) {
         this.data.add(new IntData(value));
     }
+    
+    /**
+     * Add an {@link Float} object to your series.
+     *
+     * @param value - The object you want to add.
+     */
+    @Override
+    public void addData(float value) {
+        this.data.add(new FloatData(value));
+    }
 
     /**
-     * Add an {@link Integer} object to your series.
+     * Add an {@link Double} object to your series.
      *
      * @param value - The object you want to add.
      */
