@@ -31,6 +31,7 @@ public class ChartConfiguration {
     private boolean creditsEnabled = false;
     private boolean legendEnabled = true;
     private boolean tooltipEnabled = true;
+    private boolean exportingEnabled = true;
     private Axis xAxis = new Axis(Axis.AxisType.xAxis);
     private Axis yAxis = new Axis(Axis.AxisType.yAxis);
     private Margin chartMargin = null;
@@ -121,6 +122,19 @@ public class ChartConfiguration {
      */
     public void setTooltipEnabled(boolean tooltipEnabled) {
         this.tooltipEnabled = tooltipEnabled;
+    }
+
+     public boolean isExportingEnabled() {
+        return exportingEnabled;
+    }
+
+    /**
+     * Set the chart's exporting en- or disabled.
+     * Disable exporting will hide the context button, but API methods will still be available.
+     * @param exportingEnabled enable or disable exporting.
+     */
+    public void setExportingEnabled(boolean exportingEnabled) {
+        this.exportingEnabled = exportingEnabled;
     }
 
     public Axis getxAxis() {
@@ -366,6 +380,7 @@ public class ChartConfiguration {
         builder.append(", credits: { enabled: " + isCreditsEnabled() + " }");
         builder.append(", legend: { enabled: " + isLegendEnabled() + " }");
         builder.append(", tooltip: { enabled: " + isTooltipEnabled() + " }");
+        builder.append(", exporting: { enabled: " + isExportingEnabled() + " }");
 
         if (!getSeriesList().isEmpty()) {
             int seriesNr = 1;
